@@ -19,5 +19,3 @@ spec:
         image: dm0fc2qk.kr.private-ncr.ntruss.com/nginx
         ports:
         - containerPort: 80
-      imagePullSecrets:
-      - name: regcred
