@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ncs-nginx-deployment
+  namespace: ncs 
+  labels:
+    app: nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ncs-nginx
+  template:
+    metadata:
+      labels:
+        app: ncs-nginx
+    spec:
+      containers:
+      - name: nginx
+        image: dm0fc2qk.kr.private-ncr.ntruss.com/nginx
+        ports:
+        - containerPort: 80
