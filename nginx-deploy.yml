@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ncs-nginx-deployment
-  namespace: ncs 
   labels:
     app: nginx
 spec:
